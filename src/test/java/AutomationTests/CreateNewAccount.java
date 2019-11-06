@@ -10,7 +10,6 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
 
-
 public class CreateNewAccount {
     public static WebDriver driver = TestSuite.driverFactory.getDriver();
     private HomePage homepage = new HomePage(driver);
@@ -25,12 +24,21 @@ public class CreateNewAccount {
         homepage.goTo();
     }
 
+        public static String randomAlphaNumeric(int count) {
+            final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            StringBuilder builder = new StringBuilder();
+            while (count-- != 0) {
+                int character = (int)(Math.random()*ALPHA_NUMERIC_STRING.length());
+                builder.append(ALPHA_NUMERIC_STRING.charAt(character));
+            }
+            return builder.toString();
+        }
 
     @Test
     public void register() {
         homepage.goTo();
         homepage.navigateToSignInPage();
-        signInPage.enterNewEmail("yaseen3.ahmed@ten10.com");
+        signInPage.enterNewEmail(randomAlphaNumeric(10) +"@ten10.com");
         signInPage.clickCreateAccountButton();
         createNewAccount.clickTitleMr();
         createNewAccount.enterFirstName("yaseen");
