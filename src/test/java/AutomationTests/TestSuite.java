@@ -1,9 +1,9 @@
-package Tests;
+package AutomationTests;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 
 @RunWith(Suite.class)

@@ -1,6 +1,6 @@
-package Tests;
+package AutomationTests;
+
 import PageObjects.CreateAccountPage;
-import PageObjects.DressesPage;
 import PageObjects.HomePage;
 import PageObjects.SignInPage;
 import org.junit.After;
@@ -8,15 +8,12 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import static Tests.TestSuite.driverFactory;
-
-public class AddToCart {
-    public static WebDriver driver = driverFactory.getDriver();
+public class SignIn {
+    public static WebDriver driver = TestSuite.driverFactory.getDriver();
     private HomePage homepage = new HomePage(driver);
     private SignInPage signInPage = new SignInPage(driver);
-    private DressesPage dressesPage = new DressesPage(driver);
+    private CreateAccountPage createNewAccount = new CreateAccountPage(driver);
 
 
     @Before
@@ -27,16 +24,12 @@ public class AddToCart {
 
 
     @Test
-    public void addToCart(){
+    public void signIn(){
         homepage.navigateToSignInPage();
         signInPage.enterEmail("yaseen.ahmed@ten10.com");
         signInPage.enterPassword("password");
         signInPage.clickSignIn();
         signInPage.userHasSignedIn();
-        homepage.navigateToDressesPage();
-        dressesPage.hoverOverImage();
-        dressesPage.addToCart();
-        dressesPage.itemAddedToCart();
 
 
     }
@@ -54,4 +47,3 @@ public class AddToCart {
 
     }
 }
-

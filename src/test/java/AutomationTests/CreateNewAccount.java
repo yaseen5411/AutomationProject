@@ -1,4 +1,4 @@
-package Tests;
+package AutomationTests;
 
 import PageObjects.CreateAccountPage;
 import PageObjects.HomePage;
@@ -10,12 +10,9 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
 
-import static Tests.TestSuite.driverFactory;
-
-
 
 public class CreateNewAccount {
-    public static WebDriver driver = driverFactory.getDriver();
+    public static WebDriver driver = TestSuite.driverFactory.getDriver();
     private HomePage homepage = new HomePage(driver);
     private SignInPage signInPage = new SignInPage(driver);
     private CreateAccountPage createNewAccount = new CreateAccountPage(driver);

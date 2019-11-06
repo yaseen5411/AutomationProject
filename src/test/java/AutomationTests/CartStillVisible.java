@@ -1,17 +1,15 @@
-package Tests;
+package AutomationTests;
+
 import PageObjects.*;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import static Tests.TestSuite.driverFactory;
 
 
 public class CartStillVisible {
-    public static WebDriver driver = driverFactory.getDriver();
+    public static WebDriver driver = TestSuite.driverFactory.getDriver();
     private HomePage homepage = new HomePage(driver);
     private SignInPage signInPage = new SignInPage(driver);
     private CreateAccountPage createNewAccount = new CreateAccountPage(driver);
