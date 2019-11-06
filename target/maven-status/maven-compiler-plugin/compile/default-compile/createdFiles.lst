@@ -1,0 +1,6 @@
+PageObjects\DressesPage.class
+PageObjects\SignInPage.class
+PageObjects\HomePage.class
+PageObjects\BasePage.class
+PageObjects\AccountPage.class
+PageObjects\CreateAccountPage.class

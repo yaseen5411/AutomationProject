@@ -1,0 +1,6 @@
+AutomationTests\SignIn.class
+AutomationTests\AddToCart.class
+AutomationTests\CartStillVisible.class
+AutomationTests\CreateNewAccount.class
+AutomationTests\TestSuite.class
+AutomationTests\DriverFactory.class
